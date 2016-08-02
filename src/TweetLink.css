@@ -1,0 +1,74 @@
+.TweetLink {
+    margin-top:10px;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow:  row nowrap; 
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.TweetLink .fa {
+    margin-left:5px;
+    color: #4099FF;
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+    min-width: 0;
+    min-height: auto;
+}
+.TweetLink span.message {
+    padding-left: 25px;
+    padding-right: 25px;
+    order: 2;
+    flex: 1 1 auto;
+    align-self: auto;
+    min-width: 0;
+    min-height: auto;
+}
+
+.TweetLink a.button {
+    border-radius: 5px;
+    background: #4099FF;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    order: 3;
+    flex: 0 1 50px;
+    align-self: auto;
+    min-width: 50px;
+    min-height: auto;
+}
+
+.TweetLink a.button:hover {
+    border-radius: 5px;
+    background: #66ADFF;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    order: 3;
+    flex: 0 1 50px;
+    align-self: auto;
+    min-width: 50px;
+    min-height: auto;
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 480px)
+  and (orientation: portrait) {
+    .TweetLink .fa {
+      display: none;
+    }
+    .TweetLink span.message {
+      padding-left: 10px;
+    }
+}
