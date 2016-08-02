@@ -4,7 +4,8 @@
 node_modules
 
 # production
-build
+# Removed for production
+#build
 
 # misc
 .DS_Store
