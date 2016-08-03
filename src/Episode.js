@@ -92,7 +92,7 @@ class Episode extends Component {
     }
 
     get _defaultMessage() {
-        return `I'm watching the latest That Maker Show on ${this.props.title} ${this._yt_link}`
+        return `I'm watching the latest That Maker Show - ${this.props.title} ${this._yt_link}`
     }
 } 
 
