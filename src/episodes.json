@@ -1,7 +1,7 @@
 {
     "Season 1" : {
         "1" : {
-            "title" : "3D Printing",
+            "title" : "Introduction to 3D Printing",
             "youtube_id" : "BFsxYtXhcLA",
             "producers" : {
                 "Micheal Poley": "https:///twitter.com/michaelpoley",
@@ -32,6 +32,150 @@
                 {
                     "time": 53,
                     "message": "Today I learned that 3D printers come in all shapes and sizes on That Maker Show"
+                },
+                {
+                    "time": 65,
+                    "message": "Today I learned what an extruder is on That Maker Show"
+                },
+                {
+                    "time": 93,
+                    "message": "Today I learned that 3D printers can print in more than one color and material"
+                },
+                {
+                    "time": 107,
+                    "message": "Today I learned about the '3d printing ink' used in 3D Printers"
+                },
+                {
+                    "time": 149,
+                    "message": "Today I learned that 3D printers should be in well venitaled area"
+                },
+                {
+                    "time": 218,
+                    "message": "Today I learned that you can make computer games characters from @DestinyTheGame with a 3d printer!"
+                },
+                {
+                    "time": 256,
+                    "message": "Today I learned that you can print things bigger on the inside like @bbcdoctorwho's T.A.R.D.I.S!"
+                },
+                {
+                    "time": 261,
+                    "message": "Today I learned that Darth Vader can achieve enlightenment on That Maker Show"
+                },
+                {
+                    "time": 281,
+                    "message": "Today I learned that you can use acetone to smooth ABS prints on That Maker Show"
+                },
+                {
+                    "time": 345,
+                    "message": "Today I learned that you can create practical objects like toothbrush holders from @thingiverse on That Maker Show"
+                },
+                {
+                    "time": 345,
+                    "message": "Today I learned that you can create practical objects like toothbrush holders from @thingiverse on That Maker Show"
+                },
+                {
+                    "time": 374,
+                    "message": "Today I learned improve your 3D printer with your 3D print by making parts from @thingiverse on That Maker Show"
+                },
+                {
+                    "time": 515,
+                    "message": "Today I learned that you can improve exsiting designs like storage containers from @IKEAUSA with a 3D printer"
+                },
+                {
+                    "time": 560,
+                    "message": "Today I learned  people use 3D printers to prototype projects and products"
+                },
+                {
+                    "time": 584,
+                    "message": "Today I learned that you can use @Autodesk123D to create 3D models to 3D print"
+                },
+                {
+                    "time": 617,
+                    "message": "Today I learned you can build your own games console thanks to @videopixil & @ecken on That Maker Show"
+                },
+                {
+                    "time": 631,
+                    "message": "Today I learned you can create enclosures for @Raspberry_Pi with a 3D Printer"
+                },
+                 {
+                    "time": 648,
+                    "message": "Today I learned you can 3D print tools to help you design cases from your phone or tablet from @thingiverse"
+                },
+                {
+                    "time": 818,
+                    "message": "Today I learned you can put almost anything in to @thingiverse & get something to print"
+                },
+                {
+                    "time": 841,
+                    "message": "Today I learned what 'supports' are in 3D printing on That Maker Show"
+                },
+                {
+                    "time": 964,
+                    "message": "Today I learned that once you're finished prototyping you can use @shapeways to finished your project"
+                },
+                {
+                    "time": 987,
+                    "message": "Today I learned  that you can design and print jewelery on @shapeways in precious metals!"
+                },
+                {
+                    "time": 987,
+                    "message": "Today I learned  that you can design and print jewelery on @shapeways in precious metals!"
+                },
+                {
+                    "time": 1044,
+                    "message": "Today I learned you can 3D print a massive sword from @DestinyTheGame by @kjdesigns365 on That Maker Show"
+                },
+                {
+                    "time": 1132,
+                    "message": "Today I learned you can 3D print cookie cutters & all-sorts of Christmas goodies on That Maker Show"
+                },
+                {
+                    "time": 1199,
+                    "message": "Today I learned you can 3D print a full-size humanoid robot called @inmoov on That Maker Show"
+                },
+                {
+                    "time": 1226,
+                    "message": "Today I learned you can 3D print prosthetic limbs (@RobohandSA) on That Maker Show"
+                },
+                {
+                    "time": 1287,
+                    "message": "Today I learned you can 3D print a building on That Maker Show"
+                },
+                {
+                    "time": 1310,
+                    "message": "Today I learned you can 3D print with 'funky filaments' like those from @proto_pasta on That Maker Show"
+                },
+                {
+                    "time": 1367,
+                    "message": "Today I learned you can 3D print with carbon fiber, steel, conductive matrials from @proto_pasta on That Maker Show"
+                },
+                {
+                    "time": 1388,
+                    "message": "Today I learned you can 3D print with coffee infused filament from @proto_pasta on That Maker Show"
+                },
+                {
+                    "time": 1437,
+                    "message": "Today I learned that @proto_pasta created a pine scented special edition on That Maker Show"
+                },
+                {
+                    "time": 1516,
+                    "message": "Today I learned that 3D printers like the @monoprice Select Mini start at $200 on That Maker Show"
+                },
+                {
+                    "time": 1516,
+                    "message": "Today I learned that 3D printers like the @monoprice Select Mini start at $200 on That Maker Show"
+                },
+                {
+                    "time": 1546,
+                    "message": "Today I learned on That Maker Show that 3D filament like @hatchbox3d costs around $20+ on @amazon"
+                },
+                {
+                    "time": 1622,
+                    "message": "Today I learned that you can use @Simplify3D to 'slice' prints & get estimates on how much something costs to print"
+                },
+                {
+                    "time": 1720,
+                    "message": "Today I learned that patents stifle innovation and that they are bad on That Maker Show"
                 }
             ],
             "gallery" : [
