@@ -26,7 +26,7 @@ class Episode extends Component {
                 <ul>{Object.keys(this.props.producers).map(this.renderProducers.bind(this))}</ul>
                 <h4>Special Thanks</h4>
                 <ul>{Object.keys(this.props.special_thanks).map(this.renderSpecialThanks.bind(this))}</ul>
-                <h4>Behind the Scences</h4>
+                <h4>Behind the Scenes</h4>
                 <p>Here's some photos from behind the scenes of the <em>{this.props.title}</em> episode</p>
                 <Gallery photos={this.props.gallery} />
             </div>
