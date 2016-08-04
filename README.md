@@ -1,3 +1,17 @@
+# That Maker Show TV
+
+Work on `master` when you're done:
+
+1. Commit changes `master`
+2. `git checkout production`
+3. `git merge master`
+4. `npm run build`
+5. Commit changes to `prodution`
+6. Deploy `git push dokku production:master`
+
+------------
+# react-create-app readme
+
 Below you will find some information on how to perform common tasks.  
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/template/README.md).
 
