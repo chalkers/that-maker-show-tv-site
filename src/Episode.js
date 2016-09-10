@@ -7,22 +7,22 @@ import TweetLink from './TweetLink';
 class Episode extends Component {
     constructor(props) {
         super(props);
-        this.state = { message: this._defaultMessage };  
+        this.state = { message: this._defaultMessage };
     }
     render() {
         return (
             <div id="Episode">
                 <h3>{this.props.title}</h3>
-                <Youtube 
-                    videoId={this.props.youtube_id} 
-                    onStateChange={this._onStateChange.bind(this)} 
+                <Youtube
+                    videoId={this.props.youtube_id}
+                    onStateChange={this._onStateChange.bind(this)}
                     onPlay={this._onPlay.bind(this)} />
                 <TweetLink message={this.state.message} />
                 <h4>Subscribe to That Make Show</h4>
                 <a href="https://www.youtube.com/user/thatmakershow">YouTube Channel</a> - <a href="https://itunes.apple.com/us/podcast/that-maker-show/id843687042">iTunes Podcast</a>
                 <h4>Hosted by</h4>
                 <ul>{Object.keys(this.props.hosts).map(this.renderHost.bind(this))}</ul>
-                <h4>Producers by</h4>
+                <h4>Produced by</h4>
                 <ul>{Object.keys(this.props.producers).map(this.renderProducers.bind(this))}</ul>
                 <h4>Special Thanks</h4>
                 <ul>{Object.keys(this.props.special_thanks).map(this.renderSpecialThanks.bind(this))}</ul>
@@ -69,7 +69,7 @@ class Episode extends Component {
         }
         this.playBackInterval = setInterval(()=>{
             this._getCurrentTil(player.getCurrentTime());
-        },   
+        },
         500);
     }
 
@@ -94,6 +94,6 @@ class Episode extends Component {
     get _defaultMessage() {
         return `I'm watching the latest That Maker Show - ${this.props.title} ${this._yt_link}`
     }
-} 
+}
 
 export default Episode;
