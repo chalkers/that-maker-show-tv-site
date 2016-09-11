@@ -6,7 +6,7 @@ import episodes from './episodes.json';
 
 class App extends Component {
   render() {
-    const latestEpisode = episodes["Season 1"]["1"];
+    const latestEpisode = episodes["Season 1"]["2"];
     return (
       <div className="App">
         <div className="App-header">
