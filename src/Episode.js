@@ -4,6 +4,18 @@ import './Episode.css';
 import Gallery from 'react-photo-gallery';
 import TweetLink from './TweetLink';
 
+function CreditGroup(props) {
+    let items = Object.keys(props.group).map(key => {
+        return (<li key={key}><a href="{props.group[key]}">{key}</a></li>);
+    });
+    return (
+        <div className="credits-group">
+            <h4>{props.title}</h4>
+            <ul>{items}</ul>
+        </div>
+    );
+}
+
 class Episode extends Component {
     constructor(props) {
         super(props);
@@ -18,14 +30,11 @@ class Episode extends Component {
                     onStateChange={this._onStateChange.bind(this)}
                     onPlay={this._onPlay.bind(this)} />
                 <TweetLink message={this.state.message} />
-                <h4>Subscribe to That Make Show</h4>
+                <h4>Subscribe to That Maker Show</h4>
                 <a href="https://www.youtube.com/user/thatmakershow">YouTube Channel</a> - <a href="https://itunes.apple.com/us/podcast/that-maker-show/id843687042">iTunes Podcast</a>
-                <h4>Hosted by</h4>
-                <ul>{Object.keys(this.props.hosts).map(this.renderHost.bind(this))}</ul>
-                <h4>Produced by</h4>
-                <ul>{Object.keys(this.props.producers).map(this.renderProducers.bind(this))}</ul>
-                <h4>Special Thanks</h4>
-                <ul>{Object.keys(this.props.special_thanks).map(this.renderSpecialThanks.bind(this))}</ul>
+                <CreditGroup title="Produced by" group={this.props.producers} />
+                <CreditGroup title="Crew" group={this.props.crew} />
+                <CreditGroup title="Special Thanks" group={this.props.special_thanks} />
                 <h4>Behind the Scenes</h4>
                 <p>Here's some photos from behind the scenes of the <em>{this.props.title}</em> episode</p>
                 <Gallery photos={this.props.gallery} />
@@ -33,26 +42,6 @@ class Episode extends Component {
         );
     }
 
-    renderHost(host) {
-        const link = this.props.hosts[host];
-        return (
-            <li key={host}><a href={link}>{host}</a></li>
-        );
-    }
-
-    renderProducers(producer) {
-        const link = this.props.producers[producer];
-        return (
-            <li key={producer}><a href={link}>{producer}</a></li>
-        );
-    }
-
-    renderSpecialThanks(thanks) {
-        const link = this.props.special_thanks[thanks];
-        return (
-            <li key={thanks}><a href={link}>{thanks}</a></li>
-        );
-    }
 
     _onStateChange(event) {
         if(event.data !== 1) {
