@@ -6,7 +6,7 @@ import TweetLink from './TweetLink';
 
 function CreditGroup(props) {
     let items = Object.keys(props.group).map(key => {
-        return (<li key={key}><a href="{props.group[key]}">{key}</a></li>);
+        return (<li key={key}><a href={props.group[key]}>{key}</a></li>);
     });
     return (
         <div className="credits-group">
