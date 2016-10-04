@@ -3,20 +3,20 @@ import { Link } from 'react-router';
 import episodes from './episodes.json';
 
 
-function Episode(props) {
+function EpisodeBlurb(props) {
     return (
-        <h3><Link to={'episode/' + props.episode.slug}>{props.episode.title}</Link></h3>
+        <h4><Link to={'episode/' + props.episode.slug}>{props.episode.title}</Link></h4>
     );
 }
 
 function Season(props) {
     let season = props.season;
     let episodeList = Object.keys(episodes[season]).map(episodeId => {
-        return <li key={season + '-' + episodeId}><Episode episode={episodes[season][episodeId]} /></li>;
+        return <li key={season + '-' + episodeId}><EpisodeBlurb episode={episodes[season][episodeId]} /></li>;
     });
     return (
         <div className="season">
-            <h2> { props.season }</h2>
+            <h3> { props.season }</h3>
             <ul>{ episodeList }</ul>
         </div>
     );
