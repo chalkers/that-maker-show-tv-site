@@ -1,0 +1,12 @@
+h3 {
+    text-align: center;
+}
+.season, .season ul {
+    margin: auto;
+}
+.season ul li {
+    list-style: none;
+    width: 350px;
+    text-align: center;
+    float: left;
+}
