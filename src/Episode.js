@@ -35,11 +35,14 @@ class Episode extends Component {
         let seasons = Object.keys(episodes);
         let episode;
         seasons.forEach(season => {
-            episode = Object.keys(episodes[season])
+            let episodeMatches = Object.keys(episodes[season])
                 .filter(id => episodes[season][id].slug === slug)
                 .map(id => episodes[season][id]);
+            if (episodeMatches.length > 0) {
+                episode = episodeMatches[0];
+            }
         });
-        return episode[0];
+        return episode;
     }
 
     render() {
