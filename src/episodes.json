@@ -1,6 +1,7 @@
 {
     "Season 1" : {
         "1" : {
+            "slug" : "3d-printing",
             "title" : "Introduction to 3D Printing",
             "youtube_id" : "BFsxYtXhcLA",
             "producers" : {
@@ -183,6 +184,7 @@
             ]
         },
          "2" : {
+            "slug" : "microcontrollers",
             "title" : "Introduction to Microcontrollers",
             "youtube_id" : "JTDfub5Yj-Y",
             "producers" : {
