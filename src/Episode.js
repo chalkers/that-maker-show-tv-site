@@ -3,8 +3,12 @@ import Youtube from 'react-youtube';
 import './Episode.css';
 import Gallery from 'react-photo-gallery';
 import TweetLink from './TweetLink';
+import episodes from './episodes.json';
 
 function CreditGroup(props) {
+    if (!props.group) {
+        return <div />;
+    }
     let items = Object.keys(props.group).map(key => {
         return (<li key={key}><a href={props.group[key]}>{key}</a></li>);
     });
@@ -19,25 +23,42 @@ function CreditGroup(props) {
 class Episode extends Component {
     constructor(props) {
         super(props);
+        if (this.props.episode) {
+            this.episode = this.props.episode;
+        } else {
+            this.episode = this.findEpisodeBySlug(this.props.params.slug);
+        }
         this.state = { message: this._defaultMessage };
     }
+
+    findEpisodeBySlug(slug) {
+        let seasons = Object.keys(episodes);
+        let episode;
+        seasons.forEach(season => {
+            episode = Object.keys(episodes[season])
+                .filter(id => episodes[season][id].slug === slug)
+                .map(id => episodes[season][id]);
+        });
+        return episode[0];
+    }
+
     render() {
         return (
             <div id="Episode">
-                <h3>{this.props.title}</h3>
+                <h3>{this.episode.title}</h3>
                 <Youtube
-                    videoId={this.props.youtube_id}
+                    videoId={this.episode.youtube_id}
                     onStateChange={this._onStateChange.bind(this)}
                     onPlay={this._onPlay.bind(this)} />
                 <TweetLink message={this.state.message} />
                 <h4>Subscribe to That Maker Show</h4>
                 <a href="https://www.youtube.com/user/thatmakershow">YouTube Channel</a> - <a href="https://itunes.apple.com/us/podcast/that-maker-show/id843687042">iTunes Podcast</a>
-                <CreditGroup title="Produced by" group={this.props.producers} />
-                <CreditGroup title="Crew" group={this.props.crew} />
-                <CreditGroup title="Special Thanks" group={this.props.special_thanks} />
+                <CreditGroup title="Produced by" group={this.episode.producers} />
+                <CreditGroup title="Crew" group={this.episode.crew} />
+                <CreditGroup title="Special Thanks" group={this.episode.special_thanks} />
                 <h4>Behind the Scenes</h4>
-                <p>Here's some photos from behind the scenes of the <em>{this.props.title}</em> episode</p>
-                <Gallery photos={this.props.gallery} />
+                <p>Here's some photos from behind the scenes of the <em>{this.episode.title}</em> episode</p>
+                <Gallery photos={this.episode.gallery} />
             </div>
         );
     }
@@ -64,7 +85,7 @@ class Episode extends Component {
 
     _getCurrentTil(seconds) {
         console.log(seconds);
-        const currentTils = this.props.tils.filter(til => til.time <= seconds).pop();
+        const currentTils = this.episode.tils.filter(til => til.time <= seconds).pop();
         if(currentTils) {
             this.setState({message: this._createMessageWithTime(currentTils.message, currentTils.time)});
         } else {
@@ -77,11 +98,11 @@ class Episode extends Component {
     }
 
     get _yt_link() {
-        return `http://youtu.be/${this.props.youtube_id}`;
+        return `http://youtu.be/${this.youtube_id}`;
     }
 
     get _defaultMessage() {
-        return `I'm watching the latest That Maker Show - ${this.props.title} ${this._yt_link}`
+        return `I'm watching the latest That Maker Show - ${this.episode.title} ${this._yt_link}`
     }
 }
 
