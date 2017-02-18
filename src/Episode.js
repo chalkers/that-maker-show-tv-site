@@ -101,7 +101,7 @@ class Episode extends Component {
     }
 
     get _yt_link() {
-        return `http://youtu.be/${this.youtube_id}`;
+        return `http://youtu.be/${this.episode.youtube_id}`;
     }
 
     get _defaultMessage() {
